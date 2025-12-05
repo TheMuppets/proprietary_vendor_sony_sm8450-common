@@ -21826,6 +21826,35 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "idd-logreader",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/idd-logreader",
+            ],
+            shared_libs: [
+                "libidd",
+                "libprotobuf-c-idd",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "iddd",
     owner: "sony",
     target: {

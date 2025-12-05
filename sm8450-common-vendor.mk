@@ -1344,6 +1344,7 @@ PRODUCT_PACKAGES += \
     vendor.semc.system.idd@1.1-service \
     vendor.somc.hardware.aidlmiscta-service.somc \
     vendor.somc.hardware.miscta@1.0-service \
+    idd-logreader \
     iddd \
     ims_rtp_daemon \
     imsdaemon \
