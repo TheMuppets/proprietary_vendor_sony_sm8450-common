@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sm8450-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/sony/sm8450-common/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/sony/sm8450-common/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
+    vendor/sony/sm8450-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/sony/sm8450-common/proprietary/vendor/camera/SODA_HMN_BN0010-0001:$(TARGET_COPY_OUT_VENDOR)/camera/SODA_HMN_BN0010-0001 \
     vendor/sony/sm8450-common/proprietary/vendor/camera/SUN12BS0/color_ctrl.dat:$(TARGET_COPY_OUT_VENDOR)/camera/SUN12BS0/color_ctrl.dat \
     vendor/sony/sm8450-common/proprietary/vendor/camera/SUN12BS0/dataflow.dat:$(TARGET_COPY_OUT_VENDOR)/camera/SUN12BS0/dataflow.dat \
@@ -1239,6 +1240,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.2 \
     vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
     vendor.qti.qccvndhal_aidl-V1-ndk \
