@@ -22468,6 +22468,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/keyprovd",
             ],
             shared_libs: [
+                "libbase_shim",
                 "android.hardware.security.rkp-V1-ndk",
                 "libsuntory",
                 "libcutils",
