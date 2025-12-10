@@ -22073,6 +22073,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.semc.hardware.secd@1.1-service",
             ],
             shared_libs: [
+                "android.hardware.security.rkp-V1-ndk",
                 "liblog",
                 "libutils",
                 "libhidlbase",
@@ -22467,6 +22468,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/keyprovd",
             ],
             shared_libs: [
+                "android.hardware.security.rkp-V1-ndk",
                 "libsuntory",
                 "libcutils",
                 "liblog",
