@@ -1558,85 +1558,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.gnss-aidl-impl-qti",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.gnss-V1-ndk",
-                "liblog",
-                "libcutils",
-                "libqti_vndfwk_detect_vendor",
-                "libutils",
-                "libloc_core",
-                "libgps.utils",
-                "liblocation_api",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.gnss@2.1-impl-qti",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libhidlbase",
-                "libcutils",
-                "libutils",
-                "android.hardware.gnss@1.0",
-                "android.hardware.gnss@1.1",
-                "android.hardware.gnss@2.0",
-                "android.hardware.gnss@2.1",
-                "android.hardware.gnss.measurement_corrections@1.0",
-                "android.hardware.gnss.measurement_corrections@1.1",
-                "android.hardware.gnss.visibility_control@1.0",
-                "android.hardware.health@1.0",
-                "android.hardware.health@2.0",
-                "android.hardware.health@2.1",
-                "android.hardware.power@1.2",
-                "libbase",
-                "libloc_core",
-                "libgps.utils",
-                "liblocation_api",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "audio.primary.taro",
     owner: "sony",
     strip: {
@@ -1925,6 +1846,38 @@ cc_prebuilt_library_shared {
                 "libqmi_cci",
                 "libqmiservices",
                 "libqmi",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccvndhal@1.0-impl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libfmq",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "vendor.qti.hardware.qccvndhal@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -3504,81 +3457,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libasn1cper",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libasn1cper.so",
-            ],
-            shared_libs: [
-                "libasn1crtx",
-                "libasn1crt",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libasn1crt",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libasn1crt.so",
-            ],
-            shared_libs: [
-                "libasn1crtx",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libasn1crtx",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libasn1crtx.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libaudio_log_utils",
     owner: "sony",
     strip: {
@@ -3700,35 +3578,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libdisplaydebug",
                 "libtinyxml2_1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libbatching",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libbatching.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libloc_core",
-                "libgps.utils",
                 "libc++",
                 "libc",
                 "libm",
@@ -4302,6 +4151,7 @@ cc_prebuilt_library_shared {
                 "libgps.utils",
                 "liblog",
                 "libloc_core",
+                "libloc_base_util",
                 "libc++",
                 "libc",
                 "libm",
@@ -4755,39 +4605,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libengineplugin",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libengineplugin.so",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "libcutils",
-                "libdiag",
-                "libz",
-                "liblog",
-                "liblocdiagiface",
-                "libutils",
-                "libqcbor",
-                "libminkdescriptor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libesesbprovision",
     owner: "sony",
     strip: {
@@ -4992,179 +4809,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgarden",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgarden.so",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "libloc_core",
-                "liblocation_api",
-                "liblog",
-                "libdataitems",
-                "libutils",
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.gnss-V1-ndk",
-                "android.hardware.gnss@1.0",
-                "android.hardware.gnss@1.1",
-                "android.hardware.gnss@2.0",
-                "android.hardware.gnss@2.1",
-                "android.hardware.gnss.visibility_control@1.0",
-                "android.hardware.gnss.measurement_corrections@1.0",
-                "android.hardware.gnss.measurement_corrections@1.1",
-                "libhidlbase",
-                "vendor.qti.gnss-V1-ndk_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgarden_haltests_e2e",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgarden_haltests_e2e.so",
-            ],
-            shared_libs: [
-                "libgarden",
-                "libgps.utils",
-                "libloc_core",
-                "liblocation_api",
-                "liblog",
-                "libutils",
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.gnss-V1-ndk",
-                "android.hardware.gnss@1.0",
-                "android.hardware.gnss@1.1",
-                "android.hardware.gnss@2.0",
-                "android.hardware.gnss@2.1",
-                "android.hardware.gnss.visibility_control@1.0",
-                "android.hardware.gnss.measurement_corrections@1.0",
-                "android.hardware.gnss.measurement_corrections@1.1",
-                "vendor.qti.gnss-V1-ndk_platform",
-                "libhidlbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgdtap",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgdtap.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libgps.utils",
-                "liblog",
-                "libloc_core",
-                "libizat_core",
-                "liblbs_core",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgeofencing",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgeofencing.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libgps.utils",
-                "liblog",
-                "libloc_core",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgnss",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgnss.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libloc_core",
-                "libgps.utils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libgnsspps",
     owner: "sony",
     strip: {
@@ -5193,7 +4837,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgps.utils",
+    name: "libgrpc++_unsecure_prebuilt",
     owner: "sony",
     strip: {
         none: true,
@@ -5201,13 +4845,11 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libgps.utils.so",
+                "proprietary/vendor/lib64/libgrpc++_unsecure_prebuilt.so",
             ],
             shared_libs: [
-                "libutils",
-                "libcutils",
+                "libz",
                 "liblog",
-                "libprocessgroup",
                 "libc++",
                 "libc",
                 "libm",
@@ -5472,6 +5114,8 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libgps.utils",
+                "libloc_base_util",
+                "libloc_mq_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -5502,6 +5146,7 @@ cc_prebuilt_library_shared {
                 "libgps.utils",
                 "libloc_api_v02",
                 "libloc_util",
+                "libloc_base_util",
                 "libsqlite",
                 "liblog",
                 "libc++",
@@ -5653,6 +5298,7 @@ cc_prebuilt_library_shared {
                 "libgps.utils",
                 "libcrypto",
                 "libsqlite",
+                "libloc_base_util",
                 "libloc_api_v02",
                 "libmdmdetect",
                 "libperipheral_client",
@@ -5940,7 +5586,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libloc_core",
+    name: "libloc_base_util",
     owner: "sony",
     strip: {
         none: true,
@@ -5948,12 +5594,11 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libloc_core.so",
+                "proprietary/vendor/lib64/libloc_base_util.so",
             ],
             shared_libs: [
-                "libutils",
-                "libcutils",
-                "libgps.utils",
+                "libsqlite",
+                "libssl",
                 "liblog",
                 "libc++",
                 "libc",
@@ -5988,6 +5633,99 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libloc_util",
                 "libcdfw",
+                "libloc_core",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libloc_mq_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libloc_mq_client.so",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libcutils",
+                "libgps.utils",
+                "libloc_base_util",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libloc_qwes_iface",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libloc_qwes_iface.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libgps.utils",
+                "libqcbor",
+                "libminksocket_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libloc_ril_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libloc_ril_client.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libloc_core",
+                "libgps.utils",
+                "liblbs_core",
+                "libdataitems",
+                "libutils",
+                "liblocationservice_glue",
+                "qcril_client",
+                "libqcrilNrLogger",
                 "libc++",
                 "libc",
                 "libm",
@@ -6057,34 +5795,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liblocation_api",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblocation_api.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libgps.utils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "liblocationservice",
     owner: "sony",
     strip: {
@@ -6105,6 +5815,9 @@ cc_prebuilt_library_shared {
                 "liblowi_client",
                 "libizat_core",
                 "liblocation_api",
+                "libloc_base_util",
+                "libloc_mq_client",
+                "liblowi_common",
                 "libc++",
                 "libc",
                 "libm",
@@ -6196,6 +5909,35 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libgps.utils",
+                "libloc_base_util",
+                "libloc_mq_client",
+                "liblowi_common",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblowi_common",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblowi_common.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libloc_base_util",
                 "libc++",
                 "libc",
                 "libm",
@@ -6225,6 +5967,9 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libgps.utils",
+                "libloc_base_util",
+                "libloc_mq_client",
+                "liblowi_common",
                 "libc++",
                 "libc",
                 "libm",
@@ -9170,38 +8915,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqdma_file_agent",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqdma_file_agent.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libbase",
-                "libfmq",
-                "libhidlbase",
-                "vendor.qti.hardware.qccsyshal@1.0",
-                "vendor.qti.hardware.qccsyshal@1.1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqdp",
     owner: "sony",
     strip: {
@@ -10786,37 +10499,6 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libcutils",
                 "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libslimclient",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libslimclient.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libgps.utils",
-                "liblog",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_encdec",
-                "libdiag",
-                "libc++",
-                "libc",
                 "libm",
                 "libdl",
             ],
@@ -12927,67 +12609,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libxtwifi_server_protocol",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libxtwifi_server_protocol.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libasn1cper",
-                "libasn1crt",
-                "libasn1crtx",
-                "libloc_core",
-                "libgps.utils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libxtwifi_server_protocol_uri_v3",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libxtwifi_server_protocol_uri_v3.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libgps.utils",
-                "libasn1cper",
-                "libasn1crt",
-                "libasn1crtx",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libznr",
     owner: "sony",
     strip: {
@@ -13116,6 +12737,33 @@ cc_prebuilt_library_shared {
                 "libqmiservices",
                 "libqmi_client_helper",
                 "libqmi_encdec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "qcril_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/qcril_client.so",
+            ],
+            shared_libs: [
+                "qcrilMarshal",
+                "qcrild_libqcrilnrutils",
+                "libqcrilNrLogger",
                 "libc++",
                 "libc",
                 "libm",
@@ -14280,7 +13928,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.gnss-V1-ndk_platform",
+    name: "vendor.qti.gnss-V3-ndk",
     owner: "sony",
     strip: {
         none: true,
@@ -14288,7 +13936,32 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.gnss-V1-ndk_platform.so",
+                "proprietary/vendor/lib64/vendor.qti.gnss-V3-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.gnss-V5-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.gnss-V5-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -14318,7 +13991,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbase",
                 "libbinder_ndk",
-                "vendor.qti.gnss-V1-ndk_platform",
+                "vendor.qti.gnss-V5-ndk",
                 "liblog",
                 "libcutils",
                 "libutils",
@@ -15364,6 +15037,65 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "vendor.qti.hardware.qccsyshal@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccvndhal@1.0-halimpl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "libfmq",
+                "libcutils",
+                "liblog",
+                "vendor.qti.hardware.qccvndhal@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccvndhal@1.0_vendor",
+    stem: "vendor.qti.hardware.qccvndhal@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so",
+            ],
+            shared_libs: [
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19020,36 +18752,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqcc_netstats",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libqcc_netstats.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libbase",
-                "libhidlbase",
-                "vendor.qti.hardware.qccvndhal@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqccdme",
     owner: "sony",
     strip: {
@@ -20558,24 +20260,6 @@ dex_import {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.gnss-aidl-service-qti.xml",
-    owner: "sony",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.gnss@2.1-service-qti.xml",
-    owner: "sony",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.security.keymint-service-qti.xml",
     owner: "sony",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml",
@@ -21060,35 +20744,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "engine-service",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/engine-service",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "libengineplugin",
-                "liblog",
-                "liblocdiagiface",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "feature_enabler_client",
     owner: "sony",
     target: {
@@ -21107,37 +20762,6 @@ cc_prebuilt_binary {
                 "libqdutils",
                 "libdmabufheap",
                 "libQSEEComAPI",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "garden_app",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/garden_app",
-            ],
-            shared_libs: [
-                "libgarden",
-                "libgarden_haltests_e2e",
-                "libgps.utils",
-                "liblocation_api",
-                "libloc_core",
-                "liblog",
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -21275,46 +20899,6 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.gnss-aidl-service-qti",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.gnss-aidl-service-qti",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libgps.utils",
-                "liblocation_api",
-                "libqti_vndfwk_detect_vendor",
-                "libbinder_ndk",
-                "libhidlbase",
-                "android.hardware.gnss@1.0",
-                "android.hardware.gnss@1.1",
-                "android.hardware.gnss@2.0",
-                "android.hardware.gnss@2.1",
-                "android.hardware.gnss-V1-ndk",
-                "android.hardware.gnss-aidl-impl-qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -22562,6 +22146,8 @@ cc_prebuilt_binary {
                 "libutils",
                 "libcutils",
                 "libgps.utils",
+                "libloc_base_util",
+                "libloc_mq_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -22588,9 +22174,12 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libcutils",
                 "libgps.utils",
+                "libloc_base_util",
+                "libloc_mq_client",
                 "liblog",
                 "libnl",
                 "libwpa_client",
+                "liblowi_common",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libdiag",
@@ -22621,6 +22210,9 @@ cc_prebuilt_binary {
                 "libcutils",
                 "liblowi_client",
                 "libminksocket_vendor",
+                "libloc_base_util",
+                "liblog",
+                "liblowi_common",
                 "libc++",
                 "libc",
                 "libm",
@@ -23017,6 +22609,48 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "qcc-trd",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/qcc-trd",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libprotobuf-cpp-full-3.9.1-vendorcompat",
+                "libgrpc++_unsecure_prebuilt",
+                "libqcc_file_agent",
+                "libqmi_cci",
+                "libqmiservices",
+                "libidl",
+                "libnl",
+                "libfmq",
+                "libhidlbase",
+                "vendor.qti.hardware.qccsyshal@1.1",
+                "libz",
+                "libbinder",
+                "libbase",
+                "vendor.qti.hardware.qccvndhal@1.0",
+                "vendor.qti.hardware.qccvndhal@1.0-halimpl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "qdcmss",
     owner: "sony",
     target: {
@@ -23374,45 +23008,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libnlnetmgr",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "slim_daemon",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/slim_daemon",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "liblog",
-                "libdiag",
-                "libqmi_csi",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_encdec",
-                "libutils",
-                "libhidlbase",
-                "libsensorndkbridge",
-                "android.hardware.sensors@1.0",
-                "android.frameworks.sensorservice@1.0",
-                "libloc_api_v02",
-                "libloc_core",
-                "liblbs_core",
                 "libc++",
                 "libc",
                 "libm",
@@ -23846,79 +23441,6 @@ cc_prebuilt_binary {
                 "libqcc_file_agent",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "xtwifi-client",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/xtwifi-client",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libcrypto",
-                "libz",
-                "libsqlite",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libgps.utils",
-                "libloc_core",
-                "libizat_core",
-                "liblbs_core",
-                "libavservices_minijail",
-                "libgdtap",
-                "libasn1cper",
-                "libasn1crt",
-                "libasn1crtx",
-                "libxtwifi_server_protocol",
-                "libxtwifi_server_protocol_uri_v3",
-                "liblowi_client",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "xtwifi-inet-agent",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/xtwifi-inet-agent",
-            ],
-            shared_libs: [
-                "libc",
-                "libcutils",
-                "liblog",
-                "libcurl",
-                "libgps.utils",
-                "libavservices_minijail",
-                "libc++",
                 "libm",
                 "libdl",
             ],
