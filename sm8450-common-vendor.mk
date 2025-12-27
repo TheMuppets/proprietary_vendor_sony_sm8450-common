@@ -187,7 +187,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sm8450-common/proprietary/vendor/etc/init/feature_enabler_client.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/feature_enabler_client.rc \
     vendor/sony/sm8450-common/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/sony/sm8450-common/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
-    vendor/sony/sm8450-common/proprietary/vendor/etc/init/init.embmssl_server.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.embmssl_server.rc \
     vendor/sony/sm8450-common/proprietary/vendor/etc/init/init.keyprovd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.keyprovd.rc \
     vendor/sony/sm8450-common/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
     vendor/sony/sm8450-common/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
@@ -701,7 +700,6 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libeai_fixed \
     libeai_float \
-    libembmsservice \
     libesesbprovision \
     libets_teeclient_v2 \
     libeva \
@@ -1033,8 +1031,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dpmservice@1.0_vendor \
     vendor.qti.hardware.dpmservice@1.1 \
     vendor.qti.hardware.dsp@1.0 \
-    vendor.qti.hardware.embmssl@1.0 \
-    vendor.qti.hardware.embmssl@1.1 \
     vendor.qti.hardware.factory@1.0 \
     vendor.qti.hardware.factory@1.1 \
     vendor.qti.hardware.fm@1.0_vendor \
@@ -1305,7 +1301,6 @@ PRODUCT_PACKAGES += \
     dpmQmiMgr \
     dspservice \
     edgnss-daemon \
-    embmsslServer \
     feature_enabler_client \
     android.hardware.biometrics.fingerprint@2.1-service-rbs \
     android.hardware.bluetooth@1.0-service-qti \
