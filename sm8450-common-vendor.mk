@@ -980,7 +980,6 @@ PRODUCT_PACKAGES += \
     sensors.ssc \
     libasphere \
     libdnnrwrapper \
-    libshoebox \
     libznrwrapper \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
