@@ -1295,8 +1295,6 @@ PRODUCT_PACKAGES += \
     sensors.qti \
     shsusrd \
     sscrpcd \
-    ssr_setup \
-    subsystem_ramdump \
     ta_qmi_service \
     tad \
     tftp_server \
